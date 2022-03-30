@@ -51,7 +51,7 @@ func main() {
 	os.Exit(1)
 }
 
-func handleIncoming() http.HandleFunc {
+func handleIncoming() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodPost {
 			w.WriteHeader(http.StatusForbidden)
